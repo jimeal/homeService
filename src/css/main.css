@@ -1,0 +1,161 @@
+/* @import url(./stylesheet.css); */
+@import url(./var.css);
+@import url(./common.css);
+
+/* MAIN NOTICE */
+.list-template .inner {
+    margin-top: 16px;
+}
+.list-template .title {
+    justify-content: space-between;
+}
+.list-template .title a {
+    font-size: 12px;
+}
+.list-template .title .more {
+    color: var(--primary);
+    font-weight: 600;
+}
+.list-content li {
+    border-top: 1px solid var(--border02);
+    padding: 16px;
+    box-sizing: border-box;
+}
+.list-content li:last-of-type {
+    border-bottom: 1px solid var(--border02);
+}
+.list-content li.pick {
+    background-color: var(--gray100);
+}
+.list-content li a {
+    display: block;
+    line-height: 1.5;
+}
+.list-content li a span {
+    display: block;
+    font-family: 'S-Core Dream 4';
+}
+.list-content li a .list-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-family: 'S-Core Dream 4'
+}
+.lsit-btm {
+    justify-content: space-between;
+}
+.list-btm .est-complet {
+    border: 1px solid var(--border01);
+    background-color: var(--white);
+    display: block;
+    width: 55px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--gray400);
+    border-radius: 4px;
+}
+.list-content li {
+    padding-left: 50px;
+    position: relative;
+}
+.list-content li a .description {
+    font-size: 12px;
+    font-family: 'S-Core Dream 3';
+    color: var(--gray400);
+}
+.list-content li.pick::before {
+    position: absolute;
+    left: 16px;
+    content: '';
+    display: inline-block;
+    margin-right: 8px;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+    background: url(../images/pick.png)no-repeat center/ 22px auto;
+}
+.list-content li.new a .list-title::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    display: inline-block;
+    margin-right: 8px;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+    background: url(../images/new.png)no-repeat center/ 22px auto;
+}
+.list-content li .flexbox {
+    justify-content: space-between;
+}
+
+/* LIST */
+.list {
+    position: relative;
+    border-top: 10px solid var(--gray100);
+    padding-top: 34px;
+}
+.list::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 35px;
+    display: block;
+    border-top: 1px solid var(--border02);
+}
+.list .sub {
+    color: var(--gray400);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 16px;
+}
+.list-content {
+    padding-bottom: 34px;
+}
+.list-content.order--list li {
+    padding: 16px;
+}
+.tab-container {
+    padding-top: 0;
+}
+.tab-container.tab-border {
+    position: relative;
+}
+.tab-container.tab-border::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    border-bottom: 1px solid var(--border01);
+    width: 100%;
+}
+.tab-container__item {
+    position: relative;
+}
+
+input[id*="pick"] + label::before {
+    content: '';
+    width: 13px;
+    height: 19px;
+    background: url(../images/good.png)no-repeat center/13px auto;
+    border: 0;
+}
+input[id*="pick"]:checked + label:before {
+    content: '';
+    background-image: url(../images/good-on.png);
+}
+input[id*="pick"]:checked + label:after {
+    display: none;
+}
+.list .list-card a {
+    align-items: flex-start;
+}
+.content-container__content.target {
+    display: block;
+    min-height: 240px;
+    max-height: 270px;
+    overflow: hidden;
+}

@@ -1,0 +1,23 @@
+:root {
+  /* FOUNDATION */
+  --primary: #00A8B0;
+  --secondary: #ACDEE1;
+  --tertiary: #F2FAFB;
+  --accent: #276EF1;
+  --negative: #E11900;
+  --warning: #FFC043;
+  --positive: #048848;
+
+  /* CONTENTS */
+  --black: #000;
+  --gray500: #333;
+  --gray400: #666;
+  --gray300: #999;
+  --gray200: #EEE;
+  --gray100: #FAFAFA; 
+  --white: #FFF;
+
+  /* BORDER */
+  --border01: #DDD;
+  --border02: #D9D9D9;
+}

@@ -312,7 +312,7 @@ input[type="checkbox"]:checked + label::after {
 
 /* HEADER */
 .header {
-    width: var(--max);
+    max-width: var(--max);
     position: fixed;
     left: 0;
     right: 0;

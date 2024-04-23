@@ -6,6 +6,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const apiMocker = require("connect-api-mocker");
 const pages = require("./src/template/pages");
+const CopyPlugin = require("copy-webpack-plugin");
+//const svgToMiniDataURI = require('mini-svg-data-uri');
 
 const mode = process.env.NODE_ENV || "development";
 
@@ -31,15 +33,26 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: '[name].[ext]?[hash]',
-            limit: 20000
-          }
-        }
-      }
+        test: /\.(png|jpe?g|gif|svg)$/,
+        //loader: 'file-loader', 
+        use: [
+          'file-loader?name=assets/[name].[ext]?[hash]',
+          'image-webpack-loader',
+        ],
+      },
+      // {
+      //   test: /\.(png|jpe?g|gif|svg)$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       name: 'static/[name].[ext]?[hash]',
+      //       generator: (content) => svgToMiniDataURI(content.toString()),
+      //       fallback: 'file-loader',
+      //       publicPath: './src/',
+      //       limit: 20000,
+      //     }
+      //   }
+      // }
     ]
   },
   plugins: [
@@ -125,6 +138,9 @@ module.exports = {
               }
             ]
     }),
+    new CopyPlugin([
+      { from: 'src/static', to: 'assets' },
+    ]),
     new webpack.BannerPlugin({
       banner: `
         Build Date: ${new Date().toLocaleString()}

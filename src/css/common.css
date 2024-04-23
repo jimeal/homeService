@@ -196,7 +196,7 @@ select[disabled] {
 select {
     -webkit-appearance: none;
     appearance: none;
-    background: url(../assets/ico-select-arrow.png)no-repeat center/22px auto;
+    background: url(../static/ico-select-arrow.png)no-repeat center/22px auto;
 	background-position: 98% center;
 	background-repeat: no-repeat;
 	outline: none;
@@ -222,13 +222,11 @@ select {
     display: block;
     font-size: 14px;
     margin-bottom: 10px;
-    font-family: 'S-Core Dream 7';
 }
 .input-box label .require {
     margin-left: 4px;
     color: var(--primary);
     font-size: 14px;
-    font-family: 'S-Core Dream 4';
 }
 .input-box textarea.input {
     padding: 14px;
@@ -332,7 +330,6 @@ input[type="checkbox"]:checked + label::after {
 .header--title {
     text-align: center;
     font-size: 16px;
-    font-family: 'S-Core Dream 7';
 }
 .header--main {
     text-align: center;
@@ -455,7 +452,6 @@ input[type="checkbox"]:checked + label::after {
     flex: 1 0 0;
     font-size: 14px;
     font-weight: 400;
-    font-family: 'S-Core Dream 4';
 }
 .list-card-content h3 {
     font-size: inherit;
@@ -465,7 +461,6 @@ input[type="checkbox"]:checked + label::after {
 }
 .list-card-content span {
     display: block;
-    font-family: 'S-Core Dream 3';
 }
 .list-card-content .con-tel {
     font-size: inherit;
@@ -551,8 +546,8 @@ input[type="checkbox"]:checked + label::after {
     width: 142px;
     height: 17px;
     background-color: var(--white);
-    -webkit-mask: url(../assets/logo.svg) no-repeat center/142px auto;
-    mask: url(../assets/logo.svg) no-repeat center/142px auto;
+    -webkit-mask: url(../static/logo.svg) no-repeat center/142px auto;
+    mask: url(../static/logo.svg) no-repeat center/142px auto;
 }
 .footer .footer-logo img {
     width: 142px;
@@ -572,7 +567,7 @@ input[type="checkbox"]:checked + label::after {
 }
 .footer article dl dt,
 .footer article dl dd {
-    font-family: 'S-Core Dream 3';
+    font-weight: 300;
     opacity: .7;
 }
 .footer {
@@ -812,11 +807,11 @@ article h3 span {
     margin-bottom: 16px;
 }
 .popup-memo .memo-header button {
-    background: url(../assets/ico-clear.png)no-repeat center/20px auto;
+    background: url(../static/ico-clear.png)no-repeat center/20px auto;
     text-indent: -99999px;
 }
 .popup-memo h3 {
-    font-family: 'S-Core Dream 7';
+    font-weight: 700;
     font-size: 15px;
 }
 .popup .user-info {
@@ -831,12 +826,12 @@ article h3 span {
 .popup .user-info input {
     border: 0;
     background-color: transparent;
-    font-family: 'S-Core Dream 7';
+    font-weight: 700;
     font-size: 14px;
 }
 .popup .user-info input + label {
-    font-family: 'S-Core Dream 3';
     font-size: 14px;
+    font-weight: 300;
 }
 .popup-memo form textarea {
     width: 100%;
@@ -868,7 +863,7 @@ article h3 span {
 }
 .popup-qna h4 {
     margin-top: 20px;
-    font-family: 'S-Core Dream 7';
+    font-weight: 700;
     font-size: 13px;
     line-height: 1.5;
     margin-bottom: 4px;
@@ -878,7 +873,7 @@ article h3 span {
 }
 .popup-qna span.desc {
     font-size: 13px;
-    font-family: 'S-Core Dream 3';
+    font-weight: 300;
 }
 .popup-qna .user-info:nth-of-type(2) {
     margin-bottom: 10px!important;
@@ -996,7 +991,7 @@ article h3 span {
 .calendar .month {
     justify-content: center;
     margin-bottom: 14px;
-    font-family: 'S-Core Dream 5';
+    font-weight: 500;
 }
 .calendar .month--prev {
     transform: rotate(90deg);
@@ -1018,7 +1013,7 @@ article h3 span {
     height: 35px;
     min-height: 35px;
     border-top: 1px solid #BBB;
-    font-family: 'S-Core Dream 5';
+    font-weight: 500;
     background-color: var(--gray100);
 }
 .calendar .day-btm {

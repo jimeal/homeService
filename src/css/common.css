@@ -73,17 +73,19 @@ button {
 
 /* COMMON */
 html, body {
-    height: 100%;
+    width: 100%;
+    max-width: 480px;
 }
 
 body {
+    --max: 480px;
     font-family: 'SCoreDream', sans-serif;
     font-weight: 400;
     font-size: 14px;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    min-height: 320px;
+    width: 100%;
     letter-spacing: -0.65px;
 }
 .sr-only {
@@ -310,6 +312,7 @@ input[type="checkbox"]:checked + label::after {
 
 /* HEADER */
 .header {
+    width: var(--max);
     position: fixed;
     left: 0;
     right: 0;
@@ -482,6 +485,7 @@ input[type="checkbox"]:checked + label::after {
 
 /* NAV */
 .nav {
+    max-width: var(--max);
     position: fixed;
     bottom: 0;
     left: 0;

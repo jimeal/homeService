@@ -10,7 +10,7 @@
     "dev": "cross-env NODE_ENV=development webpack",
     "prod": "cross-env NODE_ENV=production webpack",
     "clean": "rm -rf node_modules",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Bae Ji-min <dncl46@gmail.com>",

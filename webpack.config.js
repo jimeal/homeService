@@ -32,6 +32,10 @@ module.exports = {
           "sass-loader"
         ]
       },
+      // { 
+      //   test: /\.(html|htm)$/, 
+      //   loader: 'html?minimize=false' 
+      // },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
         //loader: 'file-loader', 
@@ -40,19 +44,16 @@ module.exports = {
           'image-webpack-loader',
         ],
       },
-      // {
-      //   test: /\.(png|jpe?g|gif|svg)$/,
-      //   use: {
-      //     loader: 'url-loader',
-      //     options: {
-      //       name: 'static/[name].[ext]?[hash]',
-      //       generator: (content) => svgToMiniDataURI(content.toString()),
-      //       fallback: 'file-loader',
-      //       publicPath: './src/',
-      //       limit: 20000,
-      //     }
-      //   }
-      // }
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: 'static/[name].[ext]?[hash]',
+            limit: 20000,
+          }
+        }
+      }
     ]
   },
   plugins: [
@@ -61,6 +62,7 @@ module.exports = {
         template: `./src/template/${e.name}.html`,
         title: `${e.title} | 우리동네 홈서비스`,
         filename: `${e.name}.html`,
+        inject: false,
         minify: process.env.NODE_ENV === 'production' ? {
                   collapseWhitespace: true, // 빈칸 제거
                   removeComments: true, // 주석 제거
@@ -102,6 +104,7 @@ module.exports = {
       template: `./src/template/index.html`,
       title: `우리동네 홈서비스`,
       filename: `index.html`,
+      inject: true,
       minify: process.env.NODE_ENV === 'production' ? {
                 collapseWhitespace: true, // 빈칸 제거
                 removeComments: true, // 주석 제거
@@ -115,28 +118,14 @@ module.exports = {
               },
               {
                 name: 'viewport',
-                constent: '"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"'
+                content: "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+                //content: "width=device-width, initial-scale=1.0"
               },
               { 
                   name: 'description',
                   content: 'description goes here'
               }
             ],
-            links: [
-              'https://webfontworld.github.io/score/SCoreDream.css',
-              'https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css', 
-              {
-                href: '/apple-touch-icon.png',
-                rel: 'apple-touch-icon',
-                sizes: '180x180'
-              },
-              {
-                href: '/favicon-32x32.png',
-                rel: 'icon',
-                sizes: '32x32',
-                type: 'image/png'
-              }
-            ]
     }),
     new CopyPlugin([
       { from: 'src/static', to: 'assets' },

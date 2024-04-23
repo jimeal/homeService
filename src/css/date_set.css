@@ -1,0 +1,140 @@
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
+@import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css');
+@import url(./var.css);
+@import url(./common.css);
+
+.content-container__content.target {
+  min-height: auto!important;
+  max-height: 100%!important;
+}
+
+.date-container {
+  padding-bottom: 100px;
+}
+
+.day-list li .day-num {
+  border-top: 1px solid #bbb;
+  background-color: var(--gray100);
+  font-size: 13px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 15px;
+  font-family: 'S-Core Dream 5';
+}
+.date-list-box li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border01);
+}
+.date-list-box li {
+  padding: 14px;
+  line-height: 1.5;
+}
+.date-list-box li a {}
+.date-list-box li a .list-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.list-bottom span {
+  position: relative;
+  font-size: 11px;
+  padding-right: 6px;
+}
+.list-bottom span:nth-of-type(2) {
+  background-color: transparent;
+  font-family: 'S-Core Dream 5';
+}
+.list-bottom span.tel {
+  color: #333;
+}
+.list-bottom span:nth-of-type(2)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1px;
+  height: 10px;
+  background: var(--gray400);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.list-bottom span.visit {
+  color: #CB2E66;
+}
+.list-bottom span.move {
+  color: #4274D4;
+}
+.list-bottom span.re {
+  color: #2CC082;;
+}
+
+.sd-count-box {
+  padding-top: 86px;
+  text-align: center;
+  
+}
+.sd-count-box .inner > div {
+  padding: 20px;
+  background-color: var(--gray100);
+  border-radius: 7px;
+}
+.sd-count-box h3 {
+  font-size: 14px;
+  font-family: 'S-Core Dream 6';
+}
+.sd-count-box h3 strong {
+  color: var(--negative);
+}
+.sd-count-box .inner > div p {
+  font-size: 13px;
+  margin-top: 10px;
+  line-height: 1.5;
+  color: var(--gray400);
+}
+
+/* 마감해제 */
+.flex-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.flex-btns button {
+  width: 50%;
+}
+.flex-btns .cancel-btn {
+  border: 1px solid var(--border01);
+  height: 38px;
+  border-radius: 7px;
+  line-height: 38px;
+}
+.day-btm li.old-day > span:first-of-type,
+.day-btm li.soldout--li > span:first-of-type {
+    color: var(--gray300);
+}
+
+.badge-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3px;
+  margin-top: 5px;
+  user-select: none;
+}
+.badge-container .badge {
+  display: inline-block;
+  border-radius: 999px;
+  color: var(--white, #fff);
+  font-size: 12px;
+  font-weight: 300;
+  padding: 3px;
+}
+.badge--black {
+  background-color: var(--gray500, #333);
+}
+.badge--red {
+  background-color: #CB2E66;
+}
+.badge--blue {
+  background-color: #4274D4;
+}
+.badge--green {
+  background-color: #2CC082;
+}

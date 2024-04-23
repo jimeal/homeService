@@ -1,7 +1,7 @@
 const pages = [
   {name: 'index', title: ''},
-  {name: 'sub1', title: 1}, 
-  {name: 'sub2', title: 2}
+  {name: 'date_set', title: "일정관리"}, 
+  {name: 'my', title: "마이페이지"}
 ];
 
 module.exports = pages;

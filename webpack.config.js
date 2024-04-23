@@ -14,7 +14,8 @@ const mode = process.env.NODE_ENV || "development";
 module.exports = {
   mode,
   entry: {
-    main: "./src/js/app.js"
+    main: "./src/js/app.js",
+    date_set: "./src/js/date_set.js",
   },
   output: {
     filename: "[name].js",
@@ -32,10 +33,6 @@ module.exports = {
           "sass-loader"
         ]
       },
-      // { 
-      //   test: /\.(html|htm)$/, 
-      //   loader: 'html?minimize=false' 
-      // },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
         //loader: 'file-loader', 
@@ -49,7 +46,7 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            name: 'static/[name].[ext]?[hash]',
+            name: 'assets/[name].[ext]?[hash]',
             limit: 20000,
           }
         }
@@ -62,13 +59,14 @@ module.exports = {
         template: `./src/template/${e.name}.html`,
         title: `${e.title} | 우리동네 홈서비스`,
         filename: `${e.name}.html`,
-        inject: false,
+        inject: true,
         minify: process.env.NODE_ENV === 'production' ? {
                   collapseWhitespace: true, // 빈칸 제거
                   removeComments: true, // 주석 제거
                 } : false,
         favicon: "favicon.ico",
         hash: true,
+        chunks: [e.name],
         meta: [
                 {
                     httpEquiv: 'X-UA-Compatible',
@@ -76,14 +74,14 @@ module.exports = {
                 },
                 {
                   name: 'viewport',
-                  constent: '"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"'
+                  content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
                 },
                 { 
                     name: 'description',
                     content: 'description goes here'
                 }
               ],
-              link: [
+        link: [
                 'https://webfontworld.github.io/score/SCoreDream.css',
                 'https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css', 
                 {
@@ -111,6 +109,7 @@ module.exports = {
               } : false,
       favicon: "favicon.ico",
       hash: true,
+      chunks: ['main'],
       meta: [
               {
                   httpEquiv: 'X-UA-Compatible',

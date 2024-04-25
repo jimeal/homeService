@@ -16,6 +16,7 @@ module.exports = {
   entry: {
     main: "./src/js/app.js",
     date_set: "./src/js/date_set.js",
+    order: "./src/js/order.js"
   },
   output: {
     filename: "[name].js",

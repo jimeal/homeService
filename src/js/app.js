@@ -2,6 +2,8 @@ import 'swiper/swiper.min.css';
 import 'swiper/swiper-bundle.min.css';
 import "../css/app.css";
 
+import { navList, render as nav } from './components/_nav';
+import { render as footer } from './components/_footer';
 import Swiper from 'swiper';
 import { swiperMethod, modules } from './swiper';
 
@@ -22,6 +24,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   Swiper.use(modules);
   const swiper = new Swiper(".mySwiper", swiperMethod);
+
+  navList;
+  nav();
+
+  footer();
 
 })
 

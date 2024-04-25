@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "axios": "^0.19.1",
+    "litepicker": "^2.0.12",
     "swiper": "^10.3.1"
   },
   "repository": "https://github.com/jimeal/homeService.git"

@@ -4,276 +4,133 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-  <div class="container date-container">
-    <header class="header">
-        <div class="inner">
-            <h1 class="header--title">일정관리</h1>
-        </div>
-    </header>
-
-    <nav class="nav">
-        <ul class="nav-bar--bottom flexbox">
-            <li>
-                <a href="/">
-                    <img src="./assets/nav-btn1.png" alt="홈">
-                    <span>홈</span>
-                </a>
+    <div class="container date-container">
+        <header class="header">
+            <div class="inner">
+                <h1 class="header--title">일정관리</h1>
+            </div>
+        </header>
+    
+        <nav class="nav">
+            <ul class="nav-bar--bottom flexbox">
+                
+            </ul>
+        </nav>
+    
+        <ul class="tab-container flexbox tabmenu">
+            <li class="tab-container__item active" data-tab="tab1">
+                <a class="tab-container__item--title" href="javascript:void(0)">월별보기</a>
             </li>
-            <li>
-                <a href="./date_set.html" class="active">
-                    <img src="./assets/nav-btn2-on.png" alt="일정관리">
-                    <span>일정관리</span>
-                </a>
-            </li>
-            <li class="order">
-                <a href="/">
-                    <img src="./assets/nav-btn-order.png" alt="오더관리">
-                </a>
-            </li>
-            <li>
-                <a href="/">
-                    <img src="./assets/nav-btn3.png" alt="마감관리">
-                    <span>마감관리</span>
-                </a>
-            </li>
-            <li>
-                <a href="./my.html">
-                    <img src="./assets/nav-btn4.png" alt="마이페이지">
-                    <span>MY</span>
-                </a>
+            <li class="tab-container__item" data-tab="tab2">
+                <a class="tab-container__item--title" href="javascript:void(0)">일별보기</a>
             </li>
         </ul>
-    </nav>
-
-    <div id="top-btn">
-        <img src="./assets/top-btn.png" alt="맨위로">
-    </div>
-
-    <ul class="tab-container flexbox tabmenu">
-        <li class="tab-container__item active" data-tab="tab1">
-            <a class="tab-container__item--title" href="javascript:void(0)">월별보기</a>
-        </li>
-        <li class="tab-container__item" data-tab="tab2">
-            <a class="tab-container__item--title" href="javascript:void(0)">일별보기</a>
-        </li>
-    </ul>
-    <section class="content-container qna-content">
-        <article id="tab1" class="content-container__content target tab">
-            <div class="inner">
-                <!-- 달력 -->
-                <div class="calendar">
-                    <div class="month flexbox">
-                        <button class="month--prev">
-                            <img src="./assets/md-arrow.png" alt="prev">
-                        </button>
-                        <span class="item-year">2023년</span>
-                        <span class="item-month">10월</span>
-                        <button class="month--next">
-                            <img src="./assets/md-arrow.png" alt="next">
-                        </button>
-                    </div>
-                    <ul class="day day-top flexbox">
-                        <li>일</li>
-                        <li>월</li>
-                        <li>화</li>
-                        <li>수</li>
-                        <li>목</li>
-                        <li>금</li>
-                        <li>토</li>
-                    </ul>
-                    <ul class="day day-btm flexbox">
-                        <li class="before">
-                            <span>30</span>
-                        </li>
-                        <li class="before">
-                            <span>31</span>
-                        </li>
-                        <li>
-                            <span>1</span>
-                        </li>
-                        <li>
-                            <span>2</span>
-                            <span class="tel">9:00</span>
-                            <span class="visit">9:00</span>
-                            <span class="move">9:00</span>
-                            <span class="re">9:00</span>
-                        </li>
-                        <li>
-                            <span>3</span>
-                        </li>
-                        <li>
-                            <span>4</span>
-                        </li>
-                        <li>
-                            <span>5</span>
-                        </li>
-                    </ul>
-                    <ul class="day day-btm flexbox">
-                        <li><span>6</span></li>
-                        <li><span>7</span></li>
-                        <li><span>8</span></li>
-                        <li><span>9</span></li>
-                        <li><span>10</span></li>
-                        <li><span>11</span></li>
-                        <li><span>12</span></li>
-                    </ul>
-                    <ul class="day day-btm flexbox">
-                        <li><span>13</span></li>
-                        <li><span>14</span></li>
-                        <li><span>15</span></li>
-                        <li><span>16</span></li>
-                        <li><span>17</span></li>
-                        <li><span>18</span></li>
-                        <li><span>19</span></li>
-                    </ul>
-                    <ul class="day day-btm flexbox">
-                        <li>
-                            <span>20</span>
-                        </li>
-                        <li>
-                            <span>21</span>
-                        </li>
-                        <li>
-                            <span>22</span>
-                        </li>
-                        <li>
-                            <span>23</span>
-                        </li>
-                        <li>
-                            <span>24</span>
-                        </li>
-                        <li>
-                            <span>25</span>
-                        </li>
-                        <li>
-                            <span>26</span>
-                        </li>
-                    </ul>
-                    <ul class="day day-btm flexbox">
-                        <li>
-                            <span>27</span>
-                        </li>
-                        <li>
-                            <span>28</span>
-                        </li>
-                        <li>
-                            <span>29</span>
-                        </li>
-                        <li>
-                            <span>30</span>
-                        </li>
-                        <li>
-                            <span>31</span>
-                        </li>
-                        <li class="after">
-                            <span>1</span>
-                        </li>
-                        <li class="after">
-                            <span>2</span>
-                        </li>
-                    </ul>
+        <section class="content-container qna-content">
+            <article id="tab1" class="content-container__content target tab">
+                <div class="inner">
+                    <!-- 달력 -->
+                    <div id="calendar"></div>
                 </div>
-            </div>
-        </article>
-        <article id="tab2" class="content-container__content tab">
-            <div class="inner clearfix">
-                <div class="calendar">
-                    <div class="month flexbox">
-                        <button class="month--prev">
-                            <img src="./assets/md-arrow.png" alt="prev">
-                        </button>
-                        <span class="item-year">2023년</span>
-                        <span class="item-month">10월</span>
-                        <button class="month--next">
-                            <img src="./assets/md-arrow.png" alt="next">
-                        </button>
+            </article>
+            <article id="tab2" class="content-container__content tab">
+                <div class="inner clearfix">
+                    <div class="calendar">
+                        <div class="month flexbox">
+                            <button class="month--prev">
+                                <img src="./assets/md-arrow.png" alt="prev">
+                            </button>
+                            <span class="item-year">2023년</span>
+                            <span class="item-month">10월</span>
+                            <button class="month--next">
+                                <img src="./assets/md-arrow.png" alt="next">
+                            </button>
+                        </div>
+                        <ul class="day-list">
+                            <li class="date-none">
+                                <div class="day-num">1일</div>
+                                <ul class="date-list-box">
+                                    <li>
+                                        <span>일정이 없습니다</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="day-num">2일</div>
+                                <ul class="date-list-box">
+                                    <li>
+                                        <a href="">
+                                            <div class="list-top">
+                                                <h3 class="guest-name">고길동</h3>
+                                                <span class="guest-tel">010-1234-1234</span>
+                                            </div>
+                                            <div class="list-bottom">
+                                                <span>9:00</span>
+                                                <span class="tel">전화</span>
+                                                <span>가정이사</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="list-top">
+                                                <h3 class="guest-name">고길동</h3>
+                                                <span class="guest-tel">010-1234-1234</span>
+                                            </div>
+                                            <div class="list-bottom">
+                                                <span class="">9:00</span>
+                                                <span class="visit">방문견적</span>
+                                                <span>사무실/공장이사</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="list-top">
+                                                <h3 class="guest-name">고길동</h3>
+                                                <span class="guest-tel">010-1234-1234</span>
+                                            </div>
+                                            <div class="list-bottom">
+                                                <span class="">9:00</span>
+                                                <span class="move">이사</span>
+                                                <span>사무실/공장이사</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="list-top">
+                                                <h3 class="guest-name">고길동</h3>
+                                                <span class="guest-tel">010-1234-1234</span>
+                                            </div>
+                                            <div class="list-bottom">
+                                                <span class="">9:00</span>
+                                                <span class="re">재방문</span>
+                                                <span>사무실/공장이사</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="day-list">
-                        <li class="date-none">
-                            <div class="day-num">1일</div>
-                            <ul class="date-list-box">
-                                <li>
-                                    <span>일정이 없습니다</span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="day-num">2일</div>
-                            <ul class="date-list-box">
-                                <li>
-                                    <a href="">
-                                        <div class="list-top">
-                                            <h3 class="guest-name">고길동</h3>
-                                            <span class="guest-tel">010-1234-1234</span>
-                                        </div>
-                                        <div class="list-bottom">
-                                            <span>9:00</span>
-                                            <span class="tel">전화</span>
-                                            <span>가정이사</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="list-top">
-                                            <h3 class="guest-name">고길동</h3>
-                                            <span class="guest-tel">010-1234-1234</span>
-                                        </div>
-                                        <div class="list-bottom">
-                                            <span class="">9:00</span>
-                                            <span class="visit">방문견적</span>
-                                            <span>사무실/공장이사</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="list-top">
-                                            <h3 class="guest-name">고길동</h3>
-                                            <span class="guest-tel">010-1234-1234</span>
-                                        </div>
-                                        <div class="list-bottom">
-                                            <span class="">9:00</span>
-                                            <span class="move">이사</span>
-                                            <span>사무실/공장이사</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="list-top">
-                                            <h3 class="guest-name">고길동</h3>
-                                            <span class="guest-tel">010-1234-1234</span>
-                                        </div>
-                                        <div class="list-bottom">
-                                            <span class="">9:00</span>
-                                            <span class="re">재방문</span>
-                                            <span>사무실/공장이사</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-
-        </article>
-    </section>
-
-    <!-- Swiper -->
-    <section class="swiper mySwiper section">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="./assets/banner.png" alt="행복한 이사를 위한 선택 우리동네 홈서비스">
-            </div>
-            <div class="swiper-slide">
-                <img src="./assets/banner.png" alt="행복한 이사를 위한 선택 우리동네 홈서비스">
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </section>
     
-  </div>
+            </article>
+        </section>
+    
+        <!-- Swiper -->
+        <section class="swiper mySwiper section">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/banner.png" alt="행복한 이사를 위한 선택 우리동네 홈서비스">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/banner.png" alt="행복한 이사를 위한 선택 우리동네 홈서비스">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        
+      </div>
 </body>
 </html>

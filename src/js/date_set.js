@@ -3,14 +3,12 @@ import 'swiper/swiper-bundle.min.css';
 import "../css/date_set.css";
 
 import { navList, render } from './components/_nav';
-import { tabItem, tabHandler } from './common';
-import { calendar, datepicker, badgeGenerate } from './date';
+import { tabItem, tabHandler } from './module/common';
+import { calendar, datepicker, badgeGenerate } from './module/calendar';
 import Swiper from 'swiper';
-import { swiperMethod, modules } from './swiper';
+import { swiperMethod, modules } from './module/swiper';
 
 window.addEventListener('DOMContentLoaded', () => {
-
-  console.log(window.location.pathname)
 
   tabItem.forEach(item => {
     item.addEventListener("click", tabHandler);

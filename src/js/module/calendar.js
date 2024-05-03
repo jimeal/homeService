@@ -3,6 +3,10 @@ import Litepicker from 'litepicker';
 const calendarContainer = document.querySelector('#calendar');
 const dateInput = document.querySelector('#dateSelect');
 
+const startDateInput = document.querySelector('#first');
+const endDateInput = document.querySelector('#last');
+const clearDateBtn = document.querySelector('#clear-date');
+
 //달력 초기화
 const calendar = new Litepicker({ 
   element: calendarContainer,
@@ -117,4 +121,37 @@ const badgeGenerate = function(){
   }
 }
 
-export { calendar, datepicker, badgeGenerate }
+const orderCalendar = () => {
+  //Range 선택으로 변경
+  calendar.setOptions({
+    singleMode: false
+  });
+
+  // 날짜 선택시 인풋에 텍스트 입력
+  calendar.on('preselect', (startDate, endDate) => {
+  let startDateString;
+  let endDateString;
+  if(startDate){
+    startDateString = `${startDate.getFullYear()}년 ${startDate.getMonth()}월 ${startDate.getDate()}일`;
+  }
+  if(endDate){
+      endDateString = `${endDate.getFullYear()}년 ${endDate.getMonth()}월 ${endDate.getDate()}일`;
+  }
+  //선택된 Date를 포맷화하여 Input에 할당
+  if(startDateInput){
+      startDateInput.value = startDateString ? startDateString : '';
+  }
+  if(endDateInput) {
+      endDateInput.value = endDateString ? endDateString : '';
+  }
+  });
+
+  //초기화 버튼
+  clearDateBtn.addEventListener('click', () => {
+  calendar.clearSelection();
+  startDateInput.value = '';
+  endDateInput.value = '';
+  })
+}
+
+export { calendar, datepicker, badgeGenerate, orderCalendar }

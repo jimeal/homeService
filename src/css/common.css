@@ -592,16 +592,7 @@ input[type="checkbox"]:checked + label::after {
 .filter-btn input:checked + label::after {
     display: none;
 }
-.content-container {
-    padding: 86px 0 0;
-}
-.qna-content {
-    padding-top: 30px;
-}
-.content-container .tab h2 {
-    font-size: 17px;
-    margin-bottom: 12px;
-}
+
 
 /* QNA LIST */
 .qna--list li:last-of-type {

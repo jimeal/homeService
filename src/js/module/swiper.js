@@ -12,6 +12,13 @@ const swiperMethod = {
       disableOnInteraction: false,
     }
 };
+const swiperMethod2 = {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction"
+    }
+};
 
 const modules = [
   Navigation, 
@@ -19,7 +26,8 @@ const modules = [
   Autoplay
 ];
 
-export { swiperMethod, modules }
+
+export { swiperMethod, swiperMethod2, modules }
 
 
 

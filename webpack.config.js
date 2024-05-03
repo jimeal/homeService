@@ -7,16 +7,23 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const apiMocker = require("connect-api-mocker");
 const pages = require("./src/template/pages");
 const CopyPlugin = require("copy-webpack-plugin");
-//const svgToMiniDataURI = require('mini-svg-data-uri');
+// const { scheduler } = require("timers/promises");
 
 const mode = process.env.NODE_ENV || "development";
 
 module.exports = {
   mode,
   entry: {
-    main: "./src/js/app.js",
-    date_set: "./src/js/date_set.js",
-    order: "./src/js/order.js"
+    main: './src/js/app.js',
+    date_set: './src/js/date_set.js',
+    order: './src/js/order.js',
+    soldout: './src/js/soldout.js',
+    my: './src/js/my.js',
+    list_detail: './src/js/list_detail.js',
+    notice: "./src/js/notice.js",
+    notice_detail: "./src/js/notice_detail.js",
+    move_set: "./src/js/move_set.js",
+    schedule: "./src/js/schedule.js"
   },
   output: {
     filename: "[name].js",

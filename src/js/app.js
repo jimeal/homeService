@@ -5,9 +5,10 @@ import "../css/app.css";
 import { navList, render as nav } from './components/_nav';
 import { render as footer } from './components/_footer';
 import Swiper from 'swiper';
-import { swiperMethod, modules } from './swiper';
+import { swiperMethod, modules } from './module/swiper';
+import { tabItem, tabHandler } from './module/common';
 
-import { setCookie, getCookie, on_close_modal, cookieDelete } from "./cookie";
+import { setCookie, getCookie, on_close_modal, cookieDelete } from "./module/cookie";
 
 const closeBtn = document.querySelector(".close");
 const $ipt = document.getElementById('hide-24');
@@ -24,6 +25,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   Swiper.use(modules);
   const swiper = new Swiper(".mySwiper", swiperMethod);
+
+  tabItem.forEach(item => {
+    item.addEventListener("click", tabHandler);
+  });
 
   navList;
   nav();

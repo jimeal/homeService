@@ -1,7 +1,6 @@
-@import url('https://webfontworld.github.io/score/SCoreDream.css');
-@import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css');
 @import url(./var.css);
 @import url(./common.css);
+@import url(./litepiicker.css);
 
 .content-container__content.target {
   min-height: auto!important;
@@ -261,4 +260,15 @@
 }
 .litepicker .container__days .day-item.is-start-date.is-end-date {
   border-radius: 0;
+}
+
+.content-container {
+  padding: 86px 0 0;
+}
+.qna-content {
+  padding-top: 30px;
+}
+.content-container .tab h2 {
+  font-size: 17px;
+  margin-bottom: 12px;
 }

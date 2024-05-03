@@ -1,0 +1,122 @@
+.litepicker {
+    font-size: 14px !important;
+}
+.litepicker .container__months .month-item-header {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+.litepicker .container__months .month-item-header div {
+    max-width: min-content;
+}
+.litepicker .container__months .month-item:first-child .button-previous-month{
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+.litepicker .container__months .month-item:last-child .button-next-month {
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.litepicker .container__months .month-item-header div {
+    display: flex;
+    max-width: fit-content;
+    flex-direction: row-reverse;
+    column-gap: 0.125em;
+}
+.litepicker .container__months .month-item-header div>.month-item-name {
+    margin-right: 0;
+}
+.litepicker .container__months .month-item-header div>.month-item-name,
+.litepicker .container__months .month-item-header div>.month-item-year {
+    width: max-content;
+}
+.litepicker .container__months .month-item-header div>.month-item-year::after {
+    content: '년';
+}
+.litepicker .container__months .month-item-weekdays-row {
+    height: 35px;
+    min-height: 35px;
+    border-top: 1px solid #BBB;
+    font-weight: 500;
+    background-color: var(--gray100);
+    color: inherit;
+}
+.litepicker .container__months .month-item-weekdays-row>div {
+    display: grid;
+    place-items: center;
+    font-size: inherit;
+}
+.litepicker .container__days .day-item {
+    font-size: inherit;
+    min-height: 50px;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+}
+.litepicker .container__days .day-item.is-start-date,
+.litepicker .container__days .day-item.is-end-date {
+    background-color: rgba(0, 168, 176, 0.07);
+    color: #333;
+}
+.litepicker .container__days .day-item.is-in-range {
+    background-color: #F6FEFE;
+}
+.litepicker .container__days .day-item.is-pre,
+.litepicker .container__days .day-item.is-post {
+    font-weight: 300;
+    color: var(--litepicker-is-locked-color);
+}
+.litepicker .container__days .day-item.is-pre.is-start-date,
+.litepicker .container__days .day-item.is-post.is-end-date {
+    color: #333;
+}
+.litepicker .container__days .day-item.is-pre:hover,
+.litepicker .container__days .day-item.is-post:hover {
+    font-weight: inherit;
+}
+.dateArea input {
+    box-sizing: border-box;
+    padding: 0 12px;
+}
+.litepicker .container__days .day-item.is-today {
+    color: var(--primary);
+}
+.litepicker .container__months .month-item {
+    width: 100%;
+}
+/* width 관련 */
+.litepicker,
+.litepicker .container__main,
+.litepicker .container__months {
+    width: 100%;
+    box-shadow: none!important;
+}
+.litepicker .container__days .day-item {
+    width: calc(100% / 7);
+}
+.litepicker .container__months .month-item-header .button-next-month>svg {
+    height: 0;
+}
+.litepicker .container__months .month-item-header .button-next-month::after {
+    content: '';
+    display: inline-block;
+    background: url(../static/date-arrow-right.png)no-repeat center/18px auto;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+.litepicker .container__months .month-item-header .button-previous-month>svg {
+    height: 0;
+}
+.litepicker .container__months .month-item-header .button-previous-month::after {
+    content: '';
+    background: url(../static/date-arrow-left.png)no-repeat center/18px auto;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.litepicker .container__days .day-item.is-start-date.is-end-date {
+    border-radius: 0;
+}

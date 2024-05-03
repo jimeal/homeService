@@ -1,0 +1,117 @@
+@import url(./var.css);
+@import url(./common.css);
+
+.scd-form {
+  padding-top: 86px;
+  padding-bottom: 34px;
+}
+.scd-form h2 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.select-chk {
+  display: flex;
+  flex-wrap: wrap;
+}
+.select-chk > div:nth-of-type(-n+2) {
+  width: 50%;
+}
+.select-chk > div {
+  width: 100%;
+}
+.select-chk .scd-input {
+  width: 100%;
+  height: 38px;
+}
+.input-box label {
+  font-weight: 500;
+}
+.scd-flex {
+  display: flex;
+}
+.scd-flex label {
+  flex: 0 0 70px;
+  margin: 0;
+}
+.scd-flex select:first-of-type {
+  margin-right: 12px;
+}
+.scd-textarea {
+  resize: none;
+  width: 100%;
+  height: 160px;
+  border-radius: 7px;
+  border: 1px solid var(--border01);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.scd-btns {
+  display: flex;
+  font-size: 13px;
+  gap: 12px;
+}
+.scd-btns a.list-btn {
+  height: 38px;
+  border: 1px solid var(--border01);
+  color: var(--primary);
+  font-size: inherit;
+  text-align: center;
+  line-height: 38px;
+  box-sizing: border-box;
+}
+.scd-btns button.regi-btn{
+  height: 38px;
+  font-size: inherit;
+}
+
+.est--list {
+  padding-top: 86px;
+}
+
+.memo {
+  line-height: 1.5;
+}
+.est-input {
+  height: 38px!important;
+  padding: 0!important;
+}
+.est-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.est-title.blue {
+  color: #4274D4;
+}
+.est-title.red {
+  color: #CB2E66;
+}
+.est-title.green {
+  color: #2CC082;
+}
+.est-box-top {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.del-btn {
+  width: 70px;
+  height: 26px;
+  font-size: 13px;
+  border: 1px solid var(--border01);
+  color: var(--primary);
+  flex: 0 0 70px;
+}
+.order-date {
+  margin: 0!important;
+}
+.est-box.mt34 {
+  margin: 34px 0;
+  padding-bottom: 34px;
+}
+
+input#dateSelect {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url(../static/ico-date.png)no-repeat 96%/23px auto;
+}

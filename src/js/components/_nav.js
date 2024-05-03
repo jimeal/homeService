@@ -1,4 +1,4 @@
-const URL = 'http://localhost:8080';
+import { URL } from '../utils/url';
 const navList = [
   { name: '홈', img: 'nav-btn1', path: 'index', class: 'index'},
   { name: '일정관리', img: 'nav-btn2', path: 'date_set', class: 'date'},
@@ -13,11 +13,11 @@ const path = pathSplit.replace(/.html/i, '');
 
 const render = () => {
 
-  console.log(path)
-  //isOrder = navList.name === '오더';
+  
+    console.log(path)
     const template = navList.map(navItem => {
-      
-      if(path === navItem.path && !path === 'order') {
+
+      if(path === navItem.path && path !== 'order') {
         return `
         <li class="${navItem.class}">
           <a href='${URL}/${navItem.path}.html' class="active">
@@ -25,7 +25,8 @@ const render = () => {
               <span>${navItem.name}</span>
           </a>
         </li>`
-      } else if(path === 'order') {
+      } 
+      else if (path === 'order') {
         return `
         <li class="${navItem.class}">
           <a href='${URL}/${navItem.path}.html'>
@@ -33,8 +34,7 @@ const render = () => {
               ${navItem.class === 'order' ? '' : `<span>${navItem.name}</span>`} 
           </a>
         </li>`
-      } 
-      else {
+      }else {
         return `
         <li class="${navItem.class}">
           <a href='${URL}${navItem.path === '' ? '/' : `/${navItem.path}.html`}'>

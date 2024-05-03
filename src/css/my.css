@@ -1,0 +1,141 @@
+@import url(./var.css);
+@import url(./common.css);
+
+.mypage-top {
+    padding-top: 65px;
+    margin-bottom: 20px;
+}
+.mypage-top .flexbox {
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.mypage-top .flexbox > div {
+    line-height: 1.5;
+}
+.mypage-top .flexbox > div h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 700;
+    display: inline-block;
+}
+.mypage-top .flexbox > div h2::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    display: inline-block;
+    height: 15px;
+    width: 100%;
+    background-color: #D9F2F3;
+    left: 0;
+    z-index: -1;
+}
+.mypage-top .flexbox > div a.btn {
+    display: block;
+    margin-top: 10px;
+    width: 96px;
+    height: 38px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid var(--border01);
+    color: var(--gray500);
+    text-align: center;
+    line-height: 38px;
+}
+.logout-btn {
+    font-size: 14px;
+    text-decoration: underline;
+    color: var(--gray400);
+}
+
+.my-shortcut {
+    margin-bottom: 34px;
+}
+.my-shortcut .my-stc--list {
+    border-top: 1px solid var(--border01);
+}
+.my-stc--list li {
+    border-bottom: 1px solid var(--border01);
+    padding: 16px 12px;
+    box-sizing: border-box;
+    min-height: 74px;
+}
+.my-stc--list li a .flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.list-left h3 {
+    font-weight: 500;
+}
+.list-left.new h3 {
+    position: relative;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    font-size: 14px;
+    margin-right: 20px;
+    flex: 0 0 40%;
+}
+.list-left.new .new-img {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    margin-right: 20px;
+    vertical-align: top;
+    margin-left: 4px;
+    margin-top: -2px;
+}
+.list-left.new .point-num em {
+    color: var(--gray500);
+}
+.my-stc--list li a .desc {
+    color: var(--gray400);
+}
+.my-stc--list li a img.more {
+    width: 6px;
+    height: 10px;
+}
+.my-stc--list li a .point-num {
+    display: block;
+    margin-right: 4px;
+    color: var(--negative);
+    font-size: 14px;
+    font-weight: 700;
+}
+.my-stc--list li a .point-num::after {
+    content: 'P';
+    color: var(--gray400);
+}
+.mypage-container {
+    padding-bottom: 30px;
+}
+.mypage-container input[id*="pick"] + label::before {
+    border: 0;
+}
+.mypage-container .list {
+    padding-bottom: 34px;
+}
+
+input[id*="pick"] + label::before {
+  content: '';
+  width: 13px;
+  height: 19px;
+  background: url(../static/good.png)no-repeat center/13px auto;
+  border: 0;
+}
+input[id*="pick"]:checked + label:before {
+  content: '';
+  background-image: url(../static/good-on.png);
+}
+input[id*="pick"]:checked + label:after {
+  display: none;
+}
+
+.list .sub {
+  color: var(--gray400);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 16px;
+}
+.list .list-card a {
+  align-items: flex-start;
+}

@@ -159,7 +159,7 @@ module.exports = {
     publicPath: "/",
     host: "localhost",
     overlay: true,
-    //port: 8081,
+    port: 8081,
     stats: "errors-only",
     //historyApiFallback: true
     before: app => {

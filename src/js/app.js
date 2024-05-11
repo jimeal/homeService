@@ -3,9 +3,9 @@ import 'swiper/swiper-bundle.min.css';
 import "../css/app.css";
 
 import { navList, render as nav } from './components/_nav';
-import { render as footer } from './components/_footer';
+import { FooterComponent as footer } from './components/_footer';
 import Swiper from 'swiper';
-import { swiperMethod, modules } from './module/swiper';
+import { swiperMethod, modules, swiperMethod2 } from './module/swiper';
 import { tabItem, tabHandler } from './module/common';
 
 import { setCookie, getCookie, on_close_modal, cookieDelete } from "./module/cookie";
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   Swiper.use(modules);
   const swiper = new Swiper(".mySwiper", swiperMethod);
+  const swiper2 = new Swiper(".mySwiper4", swiperMethod);
 
   tabItem.forEach(item => {
     item.addEventListener("click", tabHandler);
@@ -33,8 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   navList;
   nav();
 
-  footer();
-
+  customElements.define('app-footer', footer);
 })
 
 

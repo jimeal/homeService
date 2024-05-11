@@ -1,11 +1,8 @@
 
-const footerEl = document.querySelector(".footer");
-
-
-const render = () => {
-
-  const template = () => {
-    return `<div class="inner">
+class FooterComponent extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <div class="inner">
     <h1 class="footer-logo"></h1>
     <article class="footer-info">
         <dl class="flexbox">
@@ -65,11 +62,7 @@ const render = () => {
     </ul>
 
     <span class="copyright">COPYRIGHT © 우리동네 홈서비스. ALL RIGHTS RESERVED</span>
-  </div>
-    `
+  </div>`
   }
-
-  footerEl.innerHTML = template;
 }
-
-export { render }
+export { FooterComponent }

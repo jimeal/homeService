@@ -12,8 +12,6 @@ const path = pathSplit.replace(/.html/i, '');
 
 
 const render = () => {
-
-  
     console.log(path)
     const template = navList.map(navItem => {
 

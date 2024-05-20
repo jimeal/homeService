@@ -7,6 +7,16 @@ import { FooterComponent as footer } from './components/_footer';
 import Swiper from 'swiper';
 import { swiperMethod, modules, swiperMethod2 } from './module/swiper';
 import { tabItem, tabHandler } from './module/common';
+import { 
+  fetchPost as noticeFetch,
+  noticeTemplate,
+  noticeUl
+} from './module/noticeData';
+import { 
+  fetchPost as listFetch, 
+  listTemplate, 
+  listUl, 
+} from './module/listData';
 
 import { setCookie, getCookie, on_close_modal, cookieDelete } from "./module/cookie";
 
@@ -35,6 +45,41 @@ document.addEventListener("DOMContentLoaded", async () => {
   nav();
 
   customElements.define('app-footer', footer);
+
+  console.log(noticeFetch)
+
+  // notice data
+  noticeFetch().then(posts => {
+    // noticeUl.insertAdjacentHTML(
+    //   'afterend', posts.map((post) => {
+    //     noticeTemplate(post)
+    //   }).join('')
+    // )
+    noticeUl.innerHTML = posts.map(post => noticeTemplate(post)).join('')
+    console.log(posts.length === posts[posts.length - 1].id);
+    console.log(posts)
+  })
+  // list data
+  listFetch().then(posts => {
+    listUl.insertAdjacentHTML(
+      'afterend', posts.map(post => {
+        listTemplate(post)
+      }).join('')
+    )
+    listUl.innerHTML = posts.map(post => listTemplate(post)).join('');
+    console.log(posts)
+  })
+  // notice data
+  // listFetch().then(posts => {
+  //   listUl.insertAdjacentHTML(
+  //     'afterend', posts.map(post => {
+  //       listTemplate(post)
+  //     }).join('')
+  //   )
+  //   listUl.innerHTML = posts.map(post => listTemplate(post)).join('')
+  // })
+
+
 })
 
 

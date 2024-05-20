@@ -49,10 +49,11 @@ const foldButton = document.querySelector(".fold-btn");
 const foldButto2 = document.querySelector(".fold-btn2");
 
 const foldBtnClick = () => {
-  foldButton.addEventListener("click", (e) => {
+  foldButton.addEventListener("click", async (e) => {
       e.preventDefault();
-      productList.classList.toggle("fold")
+      productList.classList.toggle("fold");
       console.log(e.target)
+        
       if(productList.classList.contains("fold")) {
           foldButton.innerText = '접기';
       }else {

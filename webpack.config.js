@@ -8,7 +8,6 @@ const apiMocker = require("connect-api-mocker");
 const pages = require("./src/template/pages");
 const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
-// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const mode = process.env.NODE_ENV || "development";
 
@@ -119,9 +118,6 @@ module.exports = {
         }
       ]
     }),
-    // new FaviconsWebpackPlugin({
-    //   logo: 'src/static/favicon.png'
-    // }),
     new CopyPlugin([
       { from: 'src/static', to: 'assets' },
     ]),

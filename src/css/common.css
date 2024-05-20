@@ -1305,8 +1305,6 @@ article h3 span {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 190px;
-    max-height: 190px;
 }
 
 .swiper-slide img {

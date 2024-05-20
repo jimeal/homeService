@@ -49,22 +49,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   // notice data
   noticeFetch().then(posts => {
       noticeUl.innerHTML = posts.map(post => noticeTemplate(post)).join('')
-      // console.log(posts.length === posts[posts.length - 1].id);
-      // console.log(posts)
-    })
-    .catch(err => console.log(err))
-  // list data
-  listFetch().then(posts => {
-      // listUl.insertAdjacentHTML(
-      //   'afterend', posts.map(post => {
-      //     listTemplate(post)
-      //   }).join('')
-      // )
-      listUl.innerHTML = posts.map(post => listTemplate(post)).join('');
-      console.log(posts)
     })
     .catch(err => console.log(err))
 
+  // list data
+  listFetch().then(posts => {
+      listUl.innerHTML = posts.map(post => listTemplate(post)).join('');
+    })
+    .catch(err => console.log(err))
 })
 
 

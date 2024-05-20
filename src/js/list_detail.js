@@ -24,7 +24,7 @@ const swiperTopTemplate = async (post) => {
   const swiperTemp = imageArr.map((el) => {
     // console.log(el)
     return `
-     <div class="swiper-slide">
+     <div class="swiper-slide" style="height: 190px">
       <img src="${el}" alt="">
      </div>
     `

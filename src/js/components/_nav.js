@@ -1,46 +1,49 @@
 import { URL } from '../utils/url';
 const navList = [
-  { name: '홈', img: 'nav-btn1', path: 'index', class: 'index'},
-  { name: '일정관리', img: 'nav-btn2', path: 'date_set', class: 'date'},
-  { name: '오더관리', img: 'nav-btn-order', path: 'order', class: 'order'},
-  { name: '마감관리', img: 'nav-btn3', path: 'soldout', class: 'soldout'},
-  { name: '마이페이지', img: 'nav-btn4', path: 'my', class: 'my' },
+  { name: '홈', img: 'nav-btn1', path: 'index'},
+  { name: '일정관리', img: 'nav-btn2', path: 'date_set'},
+  { name: '오더관리', img: 'nav-btn-order', path: 'order'},
+  { name: '마감관리', img: 'nav-btn3', path: 'soldout'},
+  { name: '마이페이지', img: 'nav-btn4', path: 'my'},
 ];
 const ulEl = document.querySelector('.nav-bar--bottom');
 const pathSplit = window.location.pathname.split("/").pop(); 
-const path = pathSplit.replace(/.html/i, '');
-
+let path = pathSplit.replace(/.html/i, '');
 
 const render = () => {
-    console.log(path)
     const template = navList.map(navItem => {
 
-      if(path === navItem.path && path !== 'order') {
+      if(path === '') {
+        path = 'index';
+        console.log(path)
+      }
+
+      if(path === `${navItem.path}` && path !== 'order') {
         return `
-        <li class="${navItem.class}">
-          <a href='${URL}/${navItem.path}.html' class="active">
+        <li class="${navItem.path}">
+          <a href='${URL}/${navItem.path === '' ? '' : `${navItem.path}.html`}' class="active">
               <img src='./assets/${navItem.img}-on.png' alt='${navItem.name}'>
               <span>${navItem.name}</span>
           </a>
         </li>`
-      } 
-      else if (path === 'order') {
+      } else if (path === 'order') {
         return `
-        <li class="${navItem.class}">
+        <li class="${navItem.path}">
           <a href='${URL}/${navItem.path}.html'>
               <img src='./assets/${navItem.img}.png' alt='${navItem.name}'>
-              ${navItem.class === 'order' ? '' : `<span>${navItem.name}</span>`} 
+              ${navItem.path === 'order' ? '' : `<span>${navItem.name}</span>`} 
           </a>
         </li>`
-      }else {
+      } else {
         return `
-        <li class="${navItem.class}">
-          <a href='${URL}${navItem.path === '' ? '/' : `/${navItem.path}.html`}'>
+        <li class="${navItem.path}">
+          <a href='${URL}/${navItem.path}.html'>
               <img src='./assets/${navItem.img}.png' alt='${navItem.name}'>
-              ${navItem.class === 'order' ? '' : `<span>${navItem.name}</span>`} 
+              ${navItem.path === 'order' ? '' : `<span>${navItem.name}</span>`} 
           </a>
         </li>`
       }
+
     }).join('');
 
 

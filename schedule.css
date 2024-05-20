@@ -1,7 +1,7 @@
 /*!
  * 
- *         Build Date: 2024. 5. 11. 오후 1:22:10
- *         Commit Version: 089aac7
+ *         Build Date: 2024. 5. 20. 오후 5:38:40
+ *         Commit Version: fc439fd
  * 
  *         Author: Bae Ji-min
  * 
@@ -108,11 +108,13 @@ button {
 /* COMMON */
 html, body {
     width: 100%;
-    max-width: 480px;
 }
 
 body {
     --max: 480px;
+    --textOverFlow: ellipsis;
+    --overflow: hidden;
+    --display: -webkit-box;
     font-family: 'SCoreDream', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -158,19 +160,19 @@ h2 {
     overflow: hidden;
 }
 .line2 {
-    text-overflow: ellipsis;
-    overflow: hidden;
+    text-overflow: var(--textOverFlow);
+    overflow: var(--overflow);
     word-break: break-word;
-    display: -webkit-box;
+    display: var(--display);
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     line-height: 1.5;
 }
 .line3 {
-    text-overflow: ellipsis;
-    overflow: hidden;
+    text-overflow: var(--textOverFlow);
+    overflow: var(--overflow);
     word-break: break-word;
-    display: -webkit-box;
+    display: var(--display);
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     line-height: 1.5;
@@ -346,7 +348,6 @@ input[type="checkbox"]:checked + label::after {
 
 /* HEADER */
 .header {
-    max-width: var(--max);
     position: fixed;
     left: 0;
     right: 0;
@@ -439,26 +440,9 @@ input[type="checkbox"]:checked + label::after {
     height: 105px;
     flex: 1 0 105px;
     overflow: hidden;
+    border-radius: 7px;
 }
-.list-card .ladder::before {
-    content: '사다리';
-}
-.list-card .material::before {
-    content: '자재';
-}
-.list-card .air-tv::before {
-    content: '에어컨-TV';
-}
-.list-card .interior::before {
-    content: '인테리어';
-}
-.list-card .clean::before {
-    content: '청소';
-}
-.list-card .car::before {
-    content: '중고자동차';
-}
-.list-card .list-card--img::before {
+.list-card--img figcaption {
     position: absolute;
     left: 0;
     right: 0;
@@ -484,6 +468,7 @@ input[type="checkbox"]:checked + label::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 .list-card-content {
     flex: 1 0 0;
@@ -515,6 +500,7 @@ input[type="checkbox"]:checked + label::after {
     font-size: 12px;
     line-height: 1.5;
     color: var(--gray400);
+    display: -webkit-box;
 }
 
 /* NAV */
@@ -844,12 +830,12 @@ input[type="checkbox"]:checked + label::after {
     border-top: 1px solid var(--border02);
     border-bottom: 1px solid var(--border02);
 }
-.detail-top::before {
+.qna-detail .detail-top::before {
     position: absolute;
     left: 14px;
     content: 'Q';
     font-size: 20px;
-    font-family: 'S-Core Dream 7';
+    font-weight: 700;
 }
 .answer-top h2,
 .detail-top--title h2 {
@@ -1350,6 +1336,8 @@ article h3 span {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 190px;
+    max-height: 190px;
 }
 
 .swiper-slide img {

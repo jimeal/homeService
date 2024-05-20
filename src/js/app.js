@@ -46,39 +46,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   customElements.define('app-footer', footer);
 
-  console.log(noticeFetch)
-
   // notice data
   noticeFetch().then(posts => {
-    // noticeUl.insertAdjacentHTML(
-    //   'afterend', posts.map((post) => {
-    //     noticeTemplate(post)
-    //   }).join('')
-    // )
-    noticeUl.innerHTML = posts.map(post => noticeTemplate(post)).join('')
-    console.log(posts.length === posts[posts.length - 1].id);
-    console.log(posts)
-  })
+      noticeUl.innerHTML = posts.map(post => noticeTemplate(post)).join('')
+      // console.log(posts.length === posts[posts.length - 1].id);
+      // console.log(posts)
+    })
+    .catch(err => console.log(err))
   // list data
   listFetch().then(posts => {
-    listUl.insertAdjacentHTML(
-      'afterend', posts.map(post => {
-        listTemplate(post)
-      }).join('')
-    )
-    listUl.innerHTML = posts.map(post => listTemplate(post)).join('');
-    console.log(posts)
-  })
-  // notice data
-  // listFetch().then(posts => {
-  //   listUl.insertAdjacentHTML(
-  //     'afterend', posts.map(post => {
-  //       listTemplate(post)
-  //     }).join('')
-  //   )
-  //   listUl.innerHTML = posts.map(post => listTemplate(post)).join('')
-  // })
-
+      // listUl.insertAdjacentHTML(
+      //   'afterend', posts.map(post => {
+      //     listTemplate(post)
+      //   }).join('')
+      // )
+      listUl.innerHTML = posts.map(post => listTemplate(post)).join('');
+      console.log(posts)
+    })
+    .catch(err => console.log(err))
 
 })
 

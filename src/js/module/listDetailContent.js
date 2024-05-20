@@ -21,8 +21,8 @@ const postDetailTemplate = post => {
             <span class="discription">${post.discription}</span>
 
             <div class="detail-tel flexbox">
-                <span>010-1234-1234</span>
-                <a href="tel:010-1234-1234" class="btn btn--primary">전화문의</a>
+                <span>${post.phone}</span>
+                <a href="tel:${post.phone}" class="btn btn--primary">전화문의</a>
             </div>
 
             <dl class="flexbox">
@@ -78,7 +78,7 @@ const postDetailTemplate = post => {
                     <span class="prod-sum">600,000</span>
                 </li>
             </ul>
-            <a href="javascript:void(0)" class="fold-btn">펼쳐보기</a>
+            <a href="" class="fold-btn">펼쳐보기</a>
         </div>
     </section>
     <section class="info">
@@ -90,7 +90,7 @@ const postDetailTemplate = post => {
                     ${post.body}
                 </p>
             </div>
-            <a href="javascript:void(0)" class="fold-btn2">펼쳐보기</a>
+            <a href="" class="fold-btn2">펼쳐보기</a>
         </div>
     </section>
 `

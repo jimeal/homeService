@@ -43,36 +43,59 @@ const copyBtnClick = () => {
 
 
 // 업체상품 펼처보기
-const productList = document.querySelector(".product--list");
-const infoP = document.querySelector(".info-p");
-const foldButton = document.querySelector(".fold-btn");
-const foldButto2 = document.querySelector(".fold-btn2");
 
-const foldBtnClick = () => {
-  foldButton.addEventListener("click", async (e) => {
-      e.preventDefault();
-      productList.classList.toggle("fold");
+const foldBtnClick = async () => {
+  const foldBtn = document.querySelector('.fold-btn');
+  const foldBtn2 = document.querySelector(".fold-btn2");
+  const productList = document.querySelector(".product--list");
+  const info = document.querySelector(".info-p");
+
+    await foldBtn.addEventListener('click', async (e) => {
+      e.preventDefault()
       console.log(e.target)
-        
-      if(productList.classList.contains("fold")) {
-          foldButton.innerText = '접기';
-      }else {
-          foldButton.innerText = '펼쳐보기';
-      }
-  })
+      productList.classList.toggle("fold")
+      
+      productList.classList.contains("fold") 
+        ? foldBtn.innerText = '접기' 
+        : foldBtn.innerText = '펼쳐보기'
+    })
 
-  //업체정보 펼쳐보기
-  foldButto2.addEventListener("click", (e) => {
-      e.preventDefault();
-      infoP.classList.remove('line3');
-      infoP.classList.toggle('fold');
+    
+    const foldInner = (currentText) => {
+      foldBtn2.innerText = currentText;
+    }
+    const foldInit = async () => {
+      const infoPStyle = getComputedStyle(info).height;
+      const infoHeightReplace = Number(infoPStyle.replace('px', ''));
+      let infoMinHeight = 54;
+      
+      // console.log(infoHeightReplace)
 
-      if(infoP.classList.contains("fold")) {
-          foldButto2.innerText = '접기'
-      }else {
-          foldButto2.innerText = '펼쳐보기';
+      if (infoHeightReplace <= infoMinHeight) {
+        foldInner('');
+        info.classList.remove('line3');
+        console.log(1)
+      }else if(infoHeightReplace > infoMinHeight){
+        foldInner('펼쳐보기');
+        console.log(2)
+        info.classList.add('line3');
+        await foldBtn2.addEventListener("click", (e) => {
+          e.preventDefault();
+          console.log(e.target)
+  
+          info.classList.toggle('fold');
+
+          if(info.classList.contains("fold")) {
+            info.classList.remove('line3');
+            foldInner('접기');
+          }else {
+            info.classList.add('line3');
+            foldInner('펼쳐보기');
+          }
+        })
       }
-  })
+    }
+    foldInit();
 }
 
 export { historyBack, tabHandler, copyBtnClick, foldBtnClick, tabItem }

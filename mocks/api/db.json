@@ -1,0 +1,82 @@
+{
+  "notice": [
+      {
+          "id": 1,
+          "title": "우리동네 파트너 등록을 축하합니다",
+          "body": "축하합니다"
+      },
+      {
+        "id": 2,
+        "title": "급지 별 오더비 변경 안내",
+        "body": "테스트 중입니다"
+      },
+      {
+        "id": 3,
+        "title": "이사고객 상담가이드를 업로드하였습니다",
+        "body": "테스트 중입니다"
+      }
+  ],
+  "list": [
+    {
+      "id": 1,
+      "title": "우리동네 사다리",
+      "discription": "안전, 성실, 정직 사다리입니다! 30년 이사전문 사다리에요!",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, reiciendis voluptatum magni ullam nihil, facere eos id assumenda ducimus inventore, consequuntur quam? Ad blanditiis nobis itaque quibusdam nihil velit exercitationem. Facere incidunt aliquid quod tempore amet debitis neque fugit assumenda maiores, optio possimus expedita enim in qui perspiciatis corrupti. Ut culpa consequatur sunt ex veniam tenetur suscipit, ab laboriosam dignissimos. Nihil et exercitationem, corporis in assumenda facilis nulla deleniti aut amet culpa quae distinctio maiores, facere unde! Voluptatem iste perspiciatis quae libero! Sequi suscipit repudiandae optio qui, perferendis alias quia. Delectus enim quaerat minima, nisi dolorem est assumenda necessitatibus maxime perferendis ducimus dolor, tempore tempora asperiores mollitia? Esse eum voluptatem cum possimus. Laborum dolorem impedit totam cumque magnam quasi vitae! Odio, minima. Quibusdam omnis necessitatibus facere harum ex placeat natus quos earum voluptas inventore, totam voluptatum vitae quam error beatae quas iusto accusantium quod dolorum pariatur impedit. Ea, doloremque dicta.",
+      "phone": "010-0000-0000",
+      "image": "http://localhost:8081/assets/detail_img.png",
+      "state": "사다리"
+    },
+    {
+      "id": 2,
+      "title": "우리동네 자재",
+      "discription": "안전, 성실, 정직 사다리입니다! 30년 이사전문 사다리에요!",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, reiciendis voluptatum magni ullam nihil, facere eos id assumenda ducimus inventore, consequuntur quam? Ad blanditiis nobis itaque quibusdam nihil velit exercitationem. Facere incidunt aliquid quod tempore amet debitis neque fugit assumenda maiores, optio possimus expedita enim in qui perspiciatis corrupti. Ut culpa consequatur sunt ex veniam tenetur suscipit, ab laboriosam dignissimos. Nihil et exercitationem, corporis in assumenda facilis nulla deleniti aut amet culpa quae distinctio maiores, facere unde! Voluptatem iste perspiciatis quae libero! Sequi suscipit repudiandae optio qui, perferendis alias quia. Delectus enim quaerat minima, nisi dolorem est assumenda necessitatibus maxime perferendis ducimus dolor, tempore tempora asperiores mollitia? Esse eum voluptatem cum possimus. Laborum dolorem impedit totam cumque magnam quasi vitae! Odio, minima. Quibusdam omnis necessitatibus facere harum ex placeat natus quos earum voluptas inventore, totam voluptatum vitae quam error beatae quas iusto accusantium quod dolorum pariatur impedit. Ea, doloremque dicta.",
+      "phone": "010-1111-1111",
+      "image": "http://localhost:8081/assets/detail_img.png",
+      "state": "TV/에어컨"
+    },
+    {
+      "id": 2,
+      "title": "우리동네 자재",
+      "discription": "안전, 성실, 정직 사다리입니다! 30년 이사전문 사다리에요!",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, reiciendis voluptatum magni ullam nihil, facere eos id assumenda ducimus inventore, consequuntur quam? Ad blanditiis nobis itaque quibusdam nihil velit exercitationem. Facere incidunt aliquid quod tempore amet debitis neque fugit assumenda maiores, optio possimus expedita enim in qui perspiciatis corrupti. Ut culpa consequatur sunt ex veniam tenetur suscipit, ab laboriosam dignissimos. Nihil et exercitationem, corporis in assumenda facilis nulla deleniti aut amet culpa quae distinctio maiores, facere unde! Voluptatem iste perspiciatis quae libero! Sequi suscipit repudiandae optio qui, perferendis alias quia. Delectus enim quaerat minima, nisi dolorem est assumenda necessitatibus maxime perferendis ducimus dolor, tempore tempora asperiores mollitia? Esse eum voluptatem cum possimus. Laborum dolorem impedit totam cumque magnam quasi vitae! Odio, minima. Quibusdam omnis necessitatibus facere harum ex placeat natus quos earum voluptas inventore, totam voluptatum vitae quam error beatae quas iusto accusantium quod dolorum pariatur impedit. Ea, doloremque dicta.",
+      "phone": "010-2222-2222",
+      "image": "http://localhost:8081/assets/detail_img.png",
+      "state": "자재"
+    }
+  ],
+  "custom": [
+    {
+      "id": 1,
+      "name": "고길동",
+      "phone": "010-1111-8787",
+      "estimate": {
+        "complate": "견적완료"
+      }
+    },
+    {
+      "id": 2,
+      "name": "홍길동",
+      "phone": "010-2346-1234",
+      "estimate": {
+        "wait": "견적대기"
+      }
+    },
+    {
+      "id": 3,
+      "name": "박길동",
+      "phone": "010-2348-9756",
+      "estimate": {
+        "complate": "견적완료"
+      }
+    },
+    {
+      "id": 4,
+      "name": "이길동",
+      "phone": "010-5677-7816",
+      "estimate": {
+        "cancel": "견적취소"
+      }
+    }
+  ]
+}

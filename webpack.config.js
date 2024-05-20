@@ -7,7 +7,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const apiMocker = require("connect-api-mocker");
 const pages = require("./src/template/pages");
 const CopyPlugin = require("copy-webpack-plugin");
-// const { scheduler } = require("timers/promises");
+const Dotenv = require('dotenv-webpack');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const mode = process.env.NODE_ENV || "development";
 
@@ -76,34 +77,19 @@ module.exports = {
         hash: true,
         chunks: [e.name],
         meta: [
-                {
-                    httpEquiv: 'X-UA-Compatible',
-                    content: 'IE=edge'
-                },
-                {
-                  name: 'viewport',
-                  content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
-                },
-                { 
-                    name: 'description',
-                    content: 'description goes here'
-                }
-              ],
-        link: [
-                'https://webfontworld.github.io/score/SCoreDream.css',
-                'https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css', 
-                {
-                  href: '/apple-touch-icon.png',
-                  rel: 'apple-touch-icon',
-                  sizes: '180x180'
-                },
-                {
-                  href: '/favicon-32x32.png',
-                  rel: 'icon',
-                  sizes: '32x32',
-                  type: 'image/png'
-                }
-              ]
+          {
+              httpEquiv: 'X-UA-Compatible',
+              content: 'IE=edge'
+          },
+          {
+            name: 'viewport',
+            content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+          },
+          { 
+              name: 'description',
+              content: 'description goes here'
+          }
+        ]
       })
     }),
     new HtmlWebpackPlugin({
@@ -119,20 +105,22 @@ module.exports = {
       hash: true,
       chunks: ['main'],
       meta: [
-              {
-                  httpEquiv: 'X-UA-Compatible',
-                  content: 'IE=edge'
-              },
-              {
-                name: 'viewport',
-                content: "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-                //content: "width=device-width, initial-scale=1.0"
-              },
-              { 
-                  name: 'description',
-                  content: 'description goes here'
-              }
-            ],
+        {
+            httpEquiv: 'X-UA-Compatible',
+            content: 'IE=edge'
+        },
+        {
+          name: 'viewport',
+          content: "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        },
+        { 
+            name: 'description',
+            content: 'description goes here'
+        }
+      ]
+    }),
+    new FaviconsWebpackPlugin({
+      logo: 'src/static/favicon.png'
     }),
     new CopyPlugin([
       { from: 'src/static', to: 'assets' },
@@ -147,12 +135,13 @@ module.exports = {
     new webpack.DefinePlugin({
       TWO: 1+1,
       THREE: '1+2',
-      'api.domain': JSON.stringify('http://dev.api.domain.com')
+      //'api.content': JSON.stringify('http://localhost:8081')
     }),
     new CleanWebpackPlugin(),
     ...(process.env.NODE_ENV === "production"
       ? [new MiniCssExtractPlugin({filename: `[name].css`})]
       : []),
+    new Dotenv(),
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),

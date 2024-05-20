@@ -249,18 +249,21 @@ input[id="good-pick"]:checked + label::after {
     display: block;
     margin-bottom: 4px;
   }
-  .info p {
+  .info-p {
     line-height: 1.5;
     font-size: 12px;
   }
-  .info-p {
+  /* .info-p p {
     max-height: 54px;
     overflow: hidden;
-  }
+  } */
   .info-p.fold {
     max-height: 100%;
     overflow: visible;
   }
+  /* .info-p {
+    height: 100%;
+  } */
 
   /* OPERATING */
   .operating h2 {

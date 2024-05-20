@@ -4,9 +4,8 @@ const post = {};
 
 const pathSplit = window.location.pathname.split("/").pop(); 
 const path = pathSplit.replace(/.html/i, '');
-// /post-detail.html?id=${post.id}
+
 const noticeTemplate = post => {
-  console.log(path)
   if(path === 'index' || path === ''){
     if(`${post.id}` === '1') {
     return `

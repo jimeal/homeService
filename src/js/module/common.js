@@ -41,9 +41,7 @@ const copyBtnClick = () => {
   })
 }
 
-
 // 업체상품 펼처보기
-
 const foldBtnClick = async () => {
   const foldBtn = document.querySelector('.fold-btn');
   const foldBtn2 = document.querySelector(".fold-btn2");
@@ -52,7 +50,6 @@ const foldBtnClick = async () => {
 
     await foldBtn.addEventListener('click', async (e) => {
       e.preventDefault()
-      console.log(e.target)
       productList.classList.toggle("fold")
       
       productList.classList.contains("fold") 
@@ -69,15 +66,11 @@ const foldBtnClick = async () => {
       const infoHeightReplace = Number(infoPStyle.replace('px', ''));
       let infoMinHeight = 54;
       
-      // console.log(infoHeightReplace)
-
       if (infoHeightReplace <= infoMinHeight) {
         foldInner('');
         info.classList.remove('line3');
-        console.log(1)
       }else if(infoHeightReplace > infoMinHeight){
         foldInner('펼쳐보기');
-        console.log(2)
         info.classList.add('line3');
         await foldBtn2.addEventListener("click", (e) => {
           e.preventDefault();

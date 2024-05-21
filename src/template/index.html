@@ -16,35 +16,6 @@
 
     <nav class="nav">
         <ul class="nav-bar--bottom flexbox">
-            <li>
-                <a href="/" class="active">
-                    <img src="./assets/nav-btn1-on.png" alt="홈">
-                    <span>홈</span>
-                </a>
-            </li>
-            <li>
-                <a href="/date_set.html">
-                    <img src="./assets/nav-btn2.png" alt="일정관리">
-                    <span>일정관리</span>
-                </a>
-            </li>
-            <li class="order">
-                <a href="/">
-                    <img src="./assets/nav-btn-order.png" alt="오더관리">
-                </a>
-            </li>
-            <li>
-                <a href="/">
-                    <img src="./assets/nav-btn3.png" alt="마감관리">
-                    <span>마감관리</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./assets/nav-btn4.png" alt="마이페이지">
-                    <span>MY</span>
-                </a>
-            </li>
         </ul>
     </nav>
 
@@ -101,9 +72,8 @@
         <div class="swiper-pagination"></div>
     </section>
 
-    <div class="test"></div>
     <!-- ORDER -->
-    <section class="notice list-template section">
+    <!-- <section class="notice list-template section">
         <div class="inner">
             <div class="notice--title flexbox title">
                 <h2>오더관리</h2>
@@ -111,47 +81,22 @@
             </div>
 
             <ul class="tab-container flexbox tab-border">
-                <li class="tab-container__item active" data-tab="tab1">
-                  <a class="tab-container__item--title" href="javascript:void(0)">전체(3)</a>
+                <li class="tab-container__item active">
+                  <a class="tab-container__item--title" href="javascript:void(0)" data-filter="*">전체<span>0</span></a>
                 </li>
-                <li class="tab-container__item" data-tab="tab2">
-                  <a class="tab-container__item--title" href="javascript:void(0)">상담대기(0)</a>
+                <li class="tab-container__item">
+                  <a class="tab-container__item--title" href="javascript:void(0)" data-filter="wait">상담대기<span class="num">0</span></a>
                 </li>
-                <li class="tab-container__item" data-tab="tab3">
-                  <a class="tab-container__item--title" href="javascript:void(0)">견적완료(0)</a>
+                <li class="tab-container__item">
+                  <a class="tab-container__item--title" href="javascript:void(0)" data-filter="complete">견적완료<span>0</span></a>
                 </li>
-                <li class="tab-container__item" data-tab="tab4">
-                  <a class="tab-container__item--title" href="javascript:void(0)">견적취소(0)</a>
+                <li class="tab-container__item">
+                  <a class="tab-container__item--title" href="javascript:void(0)" data-filter="cancel">견적취소<span>0</span></a>
                 </li>
             </ul>
-            <!-- 주문된 내용이 없을시 none-order 클래스 추가하시면 됩니다 style맞춰놓았습니다 -->
-            <section class="content-container">
-                <article id="tab1" class="content-container__content target all">
+            <section class="content-container main-tab">
+                <article id="tab1" class="content-container__content target all tabs" data-order="">
                     <ul class="notice--list order--list list-content">
-                        <li>
-                            <a href="/">
-                                <div class="list-title line1 flexbox">
-                                    <span>고길동</span>
-                                    <span>010-1234-1234</span>
-                                </div>
-                                <div class="list-btm flexbox">
-                                    <span class="description">2032.12.13 (화) 17:30:21</span>
-                                    <span class="est-complet">견적완료</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                <div class="list-title line1 flexbox">
-                                    <span>고길동</span>
-                                    <span>010-1234-1234</span>
-                                </div>
-                                <div class="list-btm flexbox">
-                                    <span class="description">2032.12.13 (화) 17:30:21</span>
-                                    <span class="est-complet">견적완료</span>
-                                </div>
-                            </a>
-                        </li>
                         <li>
                             <a href="/">
                                 <div class="list-title line1 flexbox">
@@ -166,19 +111,20 @@
                         </li>
                     </ul>
                 </article>
-                <article id="tab2" class="content-container__content none-order" data-order="">
+                <article id="tab2" class="content-container__content none-order tabs" data-order="wait">
+                    <ul class="notice--list order--list list-content">
+                    </ul>
+                </article>
+                <article id="tab3" class="content-container__content none-order tabs" data-order="complete">
                     <span>접수된 오더가 없습니다</span>
                 </article>
-                <article id="tab3" class="content-container__content none-order">
-                    <span>접수된 오더가 없습니다</span>
-                </article>
-                <article id="tab4" class="content-container__content none-order">
+                <article id="tab4" class="content-container__content none-order tabs" data-order="cancel">
                     <span>접수된 오더가 없습니다</span>
                 </article>
             </section>
 
         </div>
-    </section>
+    </section> -->
 
     <!-- LIST -->
     <section class="list list-ul section">

@@ -37,9 +37,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const swiper = new Swiper(".mySwiper", swiperMethod);
   const swiper2 = new Swiper(".mySwiper4", swiperMethod);
 
-  tabItem.forEach(item => {
-    item.addEventListener("click", tabHandler);
-  });
 
   navList;
   nav();
@@ -47,16 +44,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   customElements.define('app-footer', footer);
 
   // notice data
-  noticeFetch().then(posts => {
+  await noticeFetch().then(posts => {
       noticeUl.innerHTML = posts.map(post => noticeTemplate(post)).join('')
     })
     .catch(err => console.log(err))
 
   // list data
-  listFetch().then(posts => {
+  await listFetch().then(posts => {
       listUl.innerHTML = posts.map(post => listTemplate(post)).join('');
     })
     .catch(err => console.log(err))
+
 })
 
 

@@ -22,7 +22,7 @@ const render = () => {
         return `
         <li class="${navItem.path}">
           <a href='${URL}/${navItem.path === '' ? '' : `${navItem.path}.html`}' class="active">
-              <img src='./assets/${navItem.img}-on.png' alt='${navItem.name}'>
+              <img src='./assets/${navItem.img}-on.png' alt=''>
               <span>${navItem.name}</span>
           </a>
         </li>`
@@ -30,7 +30,7 @@ const render = () => {
         return `
         <li class="${navItem.path}">
           <a href='${URL}/${navItem.path}.html'>
-              <img src='./assets/${navItem.img}.png' alt='${navItem.name}'>
+              <img src='./assets/${navItem.img}.png' alt=''>
               ${navItem.path === 'order' ? '' : `<span>${navItem.name}</span>`} 
           </a>
         </li>`
@@ -38,7 +38,7 @@ const render = () => {
         return `
         <li class="${navItem.path}">
           <a href='${URL}/${navItem.path}.html'>
-              <img src='./assets/${navItem.img}.png' alt='${navItem.name}'>
+              <img src='./assets/${navItem.img}.png' alt=''>
               ${navItem.path === 'order' ? '' : `<span>${navItem.name}</span>`} 
           </a>
         </li>`

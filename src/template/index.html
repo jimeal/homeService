@@ -8,7 +8,7 @@
     <header class="header header--main">
         <div class="inner flexbox">
             <h1 class="logo">
-                <img src="./assets/logo.svg" alt="우리동네홈서비스">
+                <img fetchpriority="high" src="./assets/logo.svg" alt="우리동네홈서비스">
             </h1>
             <span class="logo-sub">파트너</span>
         </div>
@@ -44,10 +44,16 @@
     <section class="swiper mySwiper section">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="./assets/banner.png" alt="행복한 이사를 위한 선택 우리동네 홈서비스">
+                <picture>
+                    <source srcset="./assets/banner.webp 1x, ./assets/banner@2x.webp 2x" type="image/webp" />
+                    <img fetchpriority="high" src="./assets/banner.png" srcset="../assets/banner@2x.png 2x" alt="행복한 이사를 위한 선택 우리동네 홈서비스 배너" />
+                </picture>
             </div>
             <div class="swiper-slide">
-                <img src="./assets/banner.png" alt="행복한 이사를 위한 선택 우리동네 홈서비스">
+                <picture>
+                    <source srcset="./assets/banner.webp 1x, ./assets/banner@2x.webp 2x" type="image/webp" />
+                    <img fetchpriority="high" src="./assets/banner.png" srcset="../assets/banner@2x.png 2x" alt="행복한 이사를 위한 선택 우리동네 홈서비스 배너 2" />
+                </picture>
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -133,7 +139,7 @@
                             <a href="javascript:void(0)">
                                 <picture>
                                     <source srcset="./assets/main-popup.webp 1x, ./assets/main-popup@2x.webp 2x" type="image/webp" />
-                                    <img src="./assets/main-popup.png" srcset="../assets/main-popup@2x.png 2x" alt="우리동네 홈서비스 팝업 배너입니다" />
+                                    <img fetchpriority="high" src="./assets/main-popup.png" srcset="../assets/main-popup@2x.png 2x" alt="우리동네 홈서비스 팝업 배너입니다" />
                                 </picture>
                             </a>
                         </div>
@@ -141,7 +147,7 @@
                             <a href="javascript:void(0)">
                                 <picture>
                                     <source srcset="./assets/main-popup.webp 1x, ./assets/main-popup@2x.webp 2x" type="image/webp" />
-                                    <img src="./assets/main-popup.png" srcset="../assets/main-popup@2x.png 2x" alt="우리동네 홈서비스 팝업배너 2입니다" />
+                                    <img fetchpriority="high" src="./assets/main-popup.png" srcset="../assets/main-popup@2x.png 2x" alt="우리동네 홈서비스 팝업배너 2입니다" />
                                 </picture>
                             </a>
                         </div>

@@ -4,6 +4,8 @@
 /* MAIN NOTICE */
 .list-template .inner {
     margin-top: 16px;
+    min-height: 307px;
+    max-height: 500px;
 }
 .list-template .title {
     justify-content: space-between;
@@ -105,6 +107,9 @@
     padding-top: 35px;
     display: block;
     border-top: 1px solid var(--border02);
+}
+.list .main-ul-list {
+    min-height: 180px;
 }
 .list .sub {
     color: var(--gray400);

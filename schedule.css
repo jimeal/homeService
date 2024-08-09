@@ -1,7 +1,7 @@
 /*!
  * 
- *         Build Date: 2024. 8. 9. 오전 3:47:13
- *         Commit Version: acae4fc
+ *         Build Date: 2024. 8. 10. 오전 1:31:04
+ *         Commit Version: 0b6e5ce
  * 
  *         Author: Bae Ji-min
  * 
@@ -1102,6 +1102,10 @@ article h3 span {
 .main-popup .swiper {
     margin: 0;
 }
+.main-popup .swiper .swiper-slide picture {
+    width: 100%;
+    display: block;
+}
 .main-popup .popup-body {
     border-radius: 28px 28px 0 0;
     overflow: hidden;
@@ -1326,6 +1330,10 @@ article h3 span {
 /* SWIPER */
 .swiper {
     width: 100%;
+    height: 100%;
+}
+.swiper-wrapper {
+    min-height: 106px;
     height: 100%;
 }
 

@@ -1071,9 +1071,13 @@ article h3 span {
 .main-popup .swiper {
     margin: 0;
 }
-.main-popup .swiper .swiper-slide picture {
+.swiper .swiper-slide picture {
     width: 100%;
     display: block;
+}
+.swiper .swiper-slide a {
+    display: block;
+    width: 100%;
 }
 .main-popup .popup-body {
     border-radius: 28px 28px 0 0;

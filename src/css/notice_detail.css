@@ -346,6 +346,13 @@
 
 .notice-detail {
     padding-top: 86px;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+.notice-layout {
+    display: flex;
+    justify-content: space-between;
 }
 .notice-detail .notice-top {
     padding-left: 16px;

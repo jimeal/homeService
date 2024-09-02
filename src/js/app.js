@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   Swiper.use(modules);
-  const swiper = new Swiper(".mySwiper", swiperMethod);
+  // const swiper = new Swiper(".mySwiper", swiperMethod);
   const swiper2 = new Swiper(".mySwiper4", swiperMethod);
 
 
